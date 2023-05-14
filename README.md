@@ -1,1 +1,1 @@
-# gateway
+# delivery-point-rating-gateway
