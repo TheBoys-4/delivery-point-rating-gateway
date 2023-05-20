@@ -1,5 +1,8 @@
 name: Main branch push workflow
 
+permissions:
+  actions: write
+
 on:
   push:
     branches:
