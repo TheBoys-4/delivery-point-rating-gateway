@@ -3,7 +3,7 @@ name: Main branch push workflow
 on:
   push:
     branches:
-      - 'main'
+      - '*'
   workflow_dispatch:
 
 env:
