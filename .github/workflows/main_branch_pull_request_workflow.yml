@@ -19,12 +19,9 @@ jobs:
           distribution: 'corretto'
       - name: Build with Maven
         run: mvn --batch-mode --update-snapshots package
-      - name: Build the Docker image
-        run: docker build . --file Dockerfile --tag delivery-point-rating-gateway:latest
-      - name: Save Docker image
-        run: docker save --output delivery-point-rating-gateway-image.tar delivery-point-rating-gateway:latest
-      - name: Upload Docker image
-        uses: actions/upload-artifact@v3
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v3
         with:
-          path: delivery-point-rating-gateway-image.tar
-          retention-days: 30
+          context: .
+          push: true
+          tags: delivery-point-rating/gateway:latest
