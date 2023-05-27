@@ -10,7 +10,7 @@ spring:
         - id: delivery-point-rating-ui
           uri: http://localhost:3000/
           predicates:
-            - Path=/
+            - Path=/ui
             - Method=GET,POST,PUT,DELETE
         - id: delivery-point-rating-data-service
           uri: http://localhost:8080/
