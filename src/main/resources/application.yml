@@ -12,3 +12,8 @@ spring:
           predicates:
             - Path=/api/delivery-point-rating/data-service/**
             - Method=GET,POST,PUT,DELETE
+        - id: delivery-point-rating-data-service
+            uri: http://localhost:8080/
+            predicates:
+              - Path=/api/delivery-point-rating/data-service/**
+              - Method=GET,POST,PUT,DELETE
